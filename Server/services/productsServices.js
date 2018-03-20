@@ -1,3 +1,13 @@
+/**
+ * @Author: VELLA CYRIL <nonym0usse>
+ * @Date:   2018-03-20T17:15:22+01:00
+ * @Email:  contact@vella.fr
+ * @Last modified by:   nonym0usse
+ * @Last modified time: 2018-03-20T17:16:45+01:00
+ */
+
+
+
 'use strict';
 
 const
@@ -18,7 +28,7 @@ const
     senteur: '',
     format: '',
     prix: '',
-    codeBarre: ''
+    codeBarre: '1234'
   }, {
     id: 3,
     nom: 'test',
@@ -71,4 +81,3 @@ module.exports = {
   getProducts: getProducts,
   getProductsById: getProductsById
 };
-

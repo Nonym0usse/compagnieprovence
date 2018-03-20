@@ -7,17 +7,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
-</ion-content>
+<ion-content padding>
+  <ion-card *ngFor="let savonview of savons">
+    <img src="{{savonview.image}}"/>
+    <ion-card-content class="card-custom">
+      <ion-card-title class="text-title">
+        {{savonview.nom}}
+      </ion-card-title>
+      <p class="text-desc">
+        {{savonview.prix}}
+      </p>
+    </ion-card-content>
+  </ion-card>

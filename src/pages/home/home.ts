@@ -3,7 +3,7 @@
  * @Date:   2018-03-20T15:47:09+01:00
  * @Email:  contact@vella.fr
  * @Last modified by:   nonym0usse
- * @Last modified time: 2018-03-20T17:02:01+01:00
+ * @Last modified time: 2018-03-20T17:26:01+01:00
  */
 
 
@@ -12,7 +12,7 @@ import { NavController } from 'ionic-angular';
 import { Savon } from '../../model/savon';
 import { SavonProvider } from '../../providers/savon/savon';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
-
+import { ListPage } from '../list/list';
 
 @Component({
   selector: 'page-home',
@@ -23,12 +23,12 @@ export class HomePage {
   mysavon : any;
 
   constructor(public navCtrl: NavController, private savon: SavonProvider, private barcodeScanner: BarcodeScanner) {
-    this.getProduit();
+    this.codebar();
   }
 
-  getProduit()
+  getProduit(barcodeData)
   {
-    this.savon.getById(2).then((item: any) => {
+    this.savon.getById(barcodeData).then((item: any) => {
       this.mysavon = item;
     });
   }
@@ -36,7 +36,8 @@ export class HomePage {
   codebar()
   {
     this.barcodeScanner.scan().then(barcodeData => {
-     console.log('Barcode data', barcodeData);
+      this.getProduit(barcodeData);
+      this.navCtrl.push(ListPage, this.mysavon);
     }).catch(err => {
         console.log('Error', err);
     });
