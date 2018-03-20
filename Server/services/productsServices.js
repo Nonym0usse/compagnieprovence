@@ -8,7 +8,8 @@ const
     image: '',
     senteur: '',
     format: '',
-    prix: ''
+    prix: '',
+    codeBarre: ''
   }, {
     id: 2,
     nom: 'test',
@@ -16,7 +17,8 @@ const
     image: '',
     senteur: '',
     format: '',
-    prix: ''
+    prix: '',
+    codeBarre: ''
   }, {
     id: 3,
     nom: 'test',
@@ -24,7 +26,8 @@ const
     image: '',
     senteur: '',
     format: '',
-    prix: ''
+    prix: '',
+    codeBarre: ''
   }, {
     id: 4,
     nom: 'test',
@@ -32,7 +35,8 @@ const
     image: '',
     senteur: '',
     format: '',
-    prix: ''
+    prix: '',
+    codeBarre: ''
   }, {
     id: 5,
     nom: 'test',
@@ -40,7 +44,8 @@ const
     image: '',
     senteur: '',
     format: '',
-    prix: ''
+    prix: '',
+    codeBarre: ''
   }];
 
 
