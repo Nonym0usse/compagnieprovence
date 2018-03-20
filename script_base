@@ -19,7 +19,7 @@ db.createCollection( "produits",
       senteur: {
         bsonType: "string"
       },
-      format : {
+        format : {
         bsonType: "int"
       },
       prix : {
